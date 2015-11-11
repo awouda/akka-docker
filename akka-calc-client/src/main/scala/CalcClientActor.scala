@@ -8,7 +8,7 @@ class CalcClientActor extends Actor  {
   import scala.concurrent.ExecutionContext.Implicits.global
 
   val remoteCalculatorActor =
-    context.actorSelection("akka.tcp://akkaCalculator@10.0.0.1:2552/user/calculator")
+    context.actorSelection("akka.tcp://akkaCalculator@127.0.0.1:2552/user/calculator")
 
   println(remoteCalculatorActor)
 

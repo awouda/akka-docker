@@ -6,9 +6,6 @@ import com.jtmconsultancy.messages._
 
 class CalculatorActor extends Actor {
 
-  var count = 0
-
-
   override def receive = {
     case Start => println("Calculator started")
     case Stop => println("stopping system")

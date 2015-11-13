@@ -1,5 +1,6 @@
 import akka.actor.Actor
 import com.jtmconsultancy.messages.{Multiply, CalcResult, Add, Tick}
+import com.typesafe.config.{ConfigFactory, Config}
 import scala.concurrent.duration._
 import scala.util.Random
 
@@ -7,8 +8,14 @@ class CalcClientActor extends Actor  {
 
   import scala.concurrent.ExecutionContext.Implicits.global
 
+  val config = ConfigFactory.load
+
+
+  val calcHost = config.getString("calculator.host")
+  val calcPort = config.getString("calculator.port")
+
   val remoteCalculatorActor =
-    context.actorSelection("akka.tcp://akkaCalculator@127.0.0.1:2552/user/calculator")
+    context.actorSelection(s"akka.tcp://akkaCalculator@${calcHost}:${calcPort}/user/calculator")
 
   println(remoteCalculatorActor)
 

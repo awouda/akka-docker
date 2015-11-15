@@ -4,10 +4,10 @@ Currently only the akkaCalc app running in a docker is provided.
 
 # Usage
 
-Clone the project and fire up sbt.
-Navigate to project akkaCalc and run task 'assembly'
-Navigate to project akkaCalcClient and run task 'assembly'
+Clone the project.
 
-exit sbt and copy the generated jar file for akkaCalc to the dockerServer folder. Do the same for the client, but copy it to the dockerClient.
+* run server-build-and-run.sh
 
-//todo add build image command, so the run.sh always works
+* examine which ip in docker container was printed
+
+* use above ip in dockerClient/dock.conf (host variable)

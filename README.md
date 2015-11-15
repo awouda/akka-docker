@@ -7,7 +7,6 @@ Currently only the akkaCalc app running in a docker is provided.
 Clone the project.
 
 * run server-build-and-run.sh
-
 * examine which ip in docker container was printed
-
 * use above ip in dockerClient/dock.conf (host variable)
+* run client-build-and-run.sh 

@@ -6,6 +6,4 @@ ADD dock.conf /
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
-EXPOSE 9100 9100
-
 ENTRYPOINT ["/start.sh"]

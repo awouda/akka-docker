@@ -4,9 +4,14 @@ Currently only the akkaCalc app running in a docker is provided.
 
 # Usage
 
-Clone the project.
-
+* clone the project
 * run server-build-and-run.sh
-* examine which ip in docker container was printed
-* use above ip in dockerClient/dock.conf (host variable)
 * run client-build-and-run.sh 
+
+
+# Some more information
+
+The server has to run first. In the start.sh script, the docker ip ad is fetched and provided to the akka configuration: dockerServer/dock.conf
+When the server has started, the client script resolves the docker ip and puts that in the client akka config, located in dockerClient/dock.conf.
+
+todo: put client in docker as well.

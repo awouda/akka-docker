@@ -2,6 +2,15 @@
 
 sbt "project akkaCalcClient" assembly
 cp akka-calc-client/target/scala-2.11/akka-calc-client-assembly-1.0.jar dockerClient/
+
+docker -f rmi wojo:calcclient
+docker build -t wojo:calcclient dockerClient/
+
+
+dockerClient/run.sh
+
+
+
 cd dockerClient
 
 docker-ip() {
@@ -11,3 +20,4 @@ docker-ip() {
 DOCKER_IP=`docker-ip calc`
 
 java -Dconfig.file=dock.conf -DdockerIp=$DOCKER_IP -jar akka-calc-client-assembly-1.0.jar
+

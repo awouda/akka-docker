@@ -1,5 +1,5 @@
 # AKKA-DOCKER
-a trail project for running an Akka app in a docker container accessible by an AKKA app on the host and/or another docker instance.
+a trial project for running an Akka app in a docker container accessible by an AKKA app on the host and/or another docker instance.
 Currently only the akkaCalc app running in a docker is provided.
 
 # Usage

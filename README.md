@@ -18,4 +18,4 @@ todo: put client in docker as well.
 
 # OSX
 
-This was developed on Linux. I was pointed out that on OSX it does not work. It seems that on OSX one cannot ping a container using the containers IP. Looking into a way to overcome this issue.
+This was developed on Linux. I was pointed out that on OSX it does not work. It seems that on OSX one cannot ping a container using the containers IP. Meaning the client cannot access the remote akka system running in the docker container by this IP. Looking into a way to overcome this issue.

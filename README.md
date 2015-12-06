@@ -15,4 +15,4 @@ When the server has started, the client script resolves the docker ip and puts t
 
 # OSX
 
-This was developed on Linux. I was pointed out that on OSX it does not work. It seems that on OSX one cannot ping a container using the containers IP. Meaning the client cannot access the remote akka system running in the docker container by this IP. Currently this is not an issue that will be fixed.
+As on OSX you use docker-machine. (if you're still using boot2docker, you're on your own). In this case we have another indirection, being we need the hostname specified (is the hostname of the VM where the docker is running on). The script assumes that the VM is called 'dev'. Otherwise change it accordingly in server and client build-and-run scripts. Look for 'docker-machine ip dev'. 

@@ -11,8 +11,8 @@ class CalculatorActor extends Actor with ActorLogging {
   override def receive = {
     case Start => log.info("Start message received ")
     case Stop => log.info("stop message received")
-    case Add(i,j) =>       sender ! CalcResult("Add",i+j)
-    case Multiply(i,j) => sender ! CalcResult("Multiply",i*j)
+    case Add(i,j) =>  log.info("got an Add"); sender ! CalcResult("Add",i+j)
+    case Multiply(i,j) => log.info("got a multiply"); sender ! CalcResult("Multiply",i*j)
   }
 
 }

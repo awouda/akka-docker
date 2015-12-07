@@ -1,5 +1,6 @@
 target/
 *target/
+dockerServer/dock.conf
 
 .DS_Store
 .idea/
